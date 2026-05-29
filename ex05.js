@@ -11,4 +11,4 @@
     }
     return count;
  }
-console.log(countConsonants("hello world")); // Expected output: 7
+console.log(countConsonants("hello world")); // Expected output: 75
