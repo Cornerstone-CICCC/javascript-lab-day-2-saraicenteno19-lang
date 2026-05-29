@@ -2,5 +2,14 @@
 // and groups them by age into an object where the keys are ages and the values are arrays of people of that age.
 // Example: groupByAge([{ name: "Alice", age: 25 }, { name: "Bob", age: 25 }, { name: "Charlie", age: 30 }])
 // should return { 25: [{ name: "Alice", age: 25 }, { name: "Bob", age: 25 }], 30: [{ name: "Charlie", age: 30 }] }.
-
+  function groupByAge(people) {
+    let groups = {};
+    for (let person of people) {
+        if (!groups[person.age]){
+            groups[person.age] = [];
+        }
+        groups[person.age].push(person);
+    }
+    return groups;
+  }
 console.log(groupByAge([{ name: "Alice", age: 25 }, { name: "Bob", age: 25 }, { name: "Charlie", age: 30 }])); // Expected output: { 25: [{ name: "Alice", age: 25 }, { name: "Bob", age: 25 }], 30: [{ name: "Charlie", age: 30 }] }
